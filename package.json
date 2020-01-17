@@ -1,0 +1,53 @@
+{
+  "name": "js-sdks",
+  "version": "1.0.0",
+  "description": "开发者在网页上通过JavaScript调用原生功能、支付、分享等sdk工具包。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix ./*-sdk/**/*.js",
+    "dev:base": "npm run lint && cross-env NODE_ENV=dev rollup -c -w ./rollup.config.js --pro=base",
+    "build:base": "npm run lint && cross-env NODE_ENV=prod rollup -c ./rollup.config.js --pro=base",
+    "dep:base": "npm run lint && cross-env NODE_ENV=dep rollup -c ./rollup.config.js --pro=base",
+    "build:index": "npm run lint && node ./build/index.js --pro=base"
+  },
+  "keywords": [
+    "交互、原生交互、支付、微信支付、支付宝支付、二维码付款、微信二维码、支付宝二维码"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-external-helpers": "^7.7.4",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-transform-classes": "^7.7.4",
+    "@babel/plugin-transform-runtime": "^7.8.0",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/runtime": "^7.8.0",
+    "@babel/runtime-corejs2": "^7.8.0",
+    "@babel/runtime-corejs3": "^7.8.0",
+    "autoprefixer": "^9.7.4",
+    "babel-eslint": "^10.0.3",
+    "cross-env": "^6.0.3",
+    "cssnano": "^4.1.10",
+    "eslint": "^6.8.0",
+    "less": "^3.10.3",
+    "livereload": "^0.8.2",
+    "lodash": "^4.17.15",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-nested": "^4.2.1",
+    "postcss-simple-vars": "^5.0.2",
+    "rollup": "^1.28.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-copy": "^3.1.0",
+    "rollup-plugin-eslint": "^7.0.0",
+    "rollup-plugin-livereload": "^1.0.4",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-serve": "^1.0.1",
+    "rollup-plugin-uglify": "^6.0.4",
+    "rollup-watch": "^4.3.1"
+  }
+}

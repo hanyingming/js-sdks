@@ -1,0 +1,8 @@
+*.log
+*.lock
+*.temp
+/dist
+**/build/
+/deploy
+/node_modules
+*-.lock

@@ -1,0 +1,27 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      // @TODO Deprecated https://eslint.org/docs/user-guide/configuring#deprecated
+      "experimentalObjectRestSpread": true,
+      "jsx": false,
+      "modules": true
+    }
+  },
+  // 以当前目录为根目录，不再向上查找
+  "root": true,
+  "rules": {
+    "semi": [
+      "error",
+      "never"
+    ]
+  }
+}
